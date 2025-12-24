@@ -1,73 +1,137 @@
-# React + TypeScript + Vite
+# React + TypeScript Boilerplate 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern **React + TypeScript** boilerplate built with **Vite**, designed for scalable, production-ready applications.  
+This setup includes **TanStack Query**, **Axios**, **React Router**, **i18n**, **ESLint**, and **Prettier** out of the box.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## React Compiler
+- ⚡ **Vite** – Fast development & optimized builds
+- ⚛️ **React 19**
+- 🟦 **TypeScript** with strict configuration
+- 🔁 **TanStack React Query** for server-state management
+- 🌐 **Axios** for HTTP requests
+- 🧭 **React Router v7**
+- 🌍 **i18next** with browser language detection & HTTP backend
+- 🧹 **ESLint + Prettier** for code quality & formatting
+- 🔥 **Fast Refresh** with Vite
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📦 Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Runtime Dependencies
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- React
+- React DOM
+- React Router
+- Axios
+- @tanstack/react-query
+- i18next
+- react-i18next
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Development Tools
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+- TypeScript
+- Vite
+- ESLint
+- Prettier
+
+---
+
+## 🚀 Getting Started
+
+### 1️⃣ Install Dependencies
+
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2️⃣ Start Development Server
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x';
-import reactDom from 'eslint-plugin-react-dom';
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+```bash
+npm run dev
 ```
+
+### 3️⃣ Build for Production
+
+```bash
+npm run build
+```
+
+### 4️⃣ Preview Production Build
+
+```bash
+npm run preview
+```
+
+---
+
+## 🧹 Linting & Formatting
+
+### Run ESLint
+
+```bash
+npm run lint
+```
+
+### Fix ESLint Issues
+
+```bash
+npm run lint:fix
+```
+
+### Format with Prettier
+
+```bash
+npm run pretty
+```
+
+### Check Formatting
+
+```bash
+npm run pretty:check
+```
+
+---
+
+## 🌍 Internationalization (i18n)
+
+This project uses **i18next** with:
+
+- Browser language detection
+- HTTP backend for loading translations
+
+You can configure languages and namespaces inside the `src/i18n` folder.
+
+---
+
+## 🔁 Data Fetching (TanStack Query)
+
+- Centralized server-state management
+- Built-in caching, retries & background refetching
+- Easily integrates with Axios
+
+---
+
+## 🧭 Routing
+
+- Uses **React Router v7**
+- Route objects supported via `createBrowserRouter`
+- Error boundaries and nested routes ready
+
+---
+
+## 🛠️ Customization
+
+You can easily extend this boilerplate with:
+
+- Authentication (JWT / OAuth)
+- Error boundaries
+- Theming (CSS / Tailwind / MUI)
+- State management (Zustand / Redux)
+
+---
+
+Happy coding! 🎉

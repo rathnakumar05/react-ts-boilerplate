@@ -1,3 +1,4 @@
 {
-  "hello": "Hello Vite + React + TS!"
+  "home_title": "Welcome to the Home Page",
+  "your_ip": "Your IP Address is: {{ip}}"
 }

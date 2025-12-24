@@ -1,11 +1,15 @@
-import { useTranslation } from 'react-i18next';
+import { RouterProvider } from 'react-router';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import router from './router';
+import { reactQueryConfig } from './config/reactQueryConfig';
+
+const queryClient = new QueryClient(reactQueryConfig);
 
 function App() {
-  const { t } = useTranslation();
   return (
-    <>
-      <h1>{t('hello')}</h1>
-    </>
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+    </QueryClientProvider>
   );
 }
 
